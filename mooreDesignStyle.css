@@ -12,20 +12,27 @@ body {
   text-decoration: none;
 }
 
-.top {
+#top {
   top: 0;
   position: fixed;
-  overflow: hidden;
+  display: block;
   width: 100%;
   height: 100px;
   background-color: rgba(222, 222, 222, 0.1);
   border-bottom: solid 2px black;
+  transition: top 0.3s;
 }
 
-.top .nav {
+#top .nav {
   float: right;
   padding: 25px;
   margin-top: 10px;
+}
+
+.logo {
+  float: left;
+  width: 200px;
+  height: 100px;
 }
 
 .nav a {
@@ -35,11 +42,19 @@ body {
   color: white;
 }
 
+.nav a:hover {
+  color: black;
+}
+
 .bgimage {
   min-height: inherit;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .img1 { background-image: url("images/businessImage1.jpg"); }
@@ -47,8 +62,60 @@ body {
 .img3 { background-image: url("images/hiring.jpg"); }
 
 
+.centerText {
+  width: 800px;
+  height: 400px;
+  color: white;
+  line-height: 350px;
+  text-align: center;
+}
+.centerText:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.leftText {
+  border-right: 2px white solid;
+}
+
+.rightText p {
+    display: inline-block;
+}
+
+.leftText, .rightText {
+  float: left;
+  width: 50%;
+  text-shadow: 0px 2px black;
+}
+
+
 .footer {
   width: 100%;
   height: 500px;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #616161;
+  text-decoration: none;
+  color: white;
+}
+.footer .row {
+  width: 800px;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
 }

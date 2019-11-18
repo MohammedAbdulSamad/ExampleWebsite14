@@ -2,11 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mooreDesign</title>
     <link rel="stylesheet" type="text/css" href="mooreDesignStyle.css">
   </head>
   <body>
-    <div class="top">
+    <div id="top">
+      <div class="logo">
+        <img src="images\logo.png" width="200px" alt="logo">
+      </div>
       <div class="nav">
         <a href="#">About</a>
         <a href="#">Our Work</a>
@@ -15,28 +19,65 @@
       </div>
     </div>
 
-      <div class="bgimage img1"></div>
-      <div class="bgimage img2"></div>
-      <div class="bgimage img3"></div>
+      <div class="bgimage img1">
+        <div class="centerText">
+          <div class="leftText"><h1>moore Business Ideas.</h1></div>
+          <div class="rightText"><p>With a team of experts, we promise to deliver.</p></div>
+        </div>
+      </div>
+      <div class="bgimage img2">
+        <div class="centerText">
+          <div class="leftText"><h1>moore Code.</h1></div>
+          <div class="rightText"><p>We love coding and ours is good too.</p></div>
+        </div>
+      </div>
+      <div class="bgimage img3">
+        <div class="centerText">
+          <div class="leftText"><h1>moore People.</h1></div>
+          <div class="rightText"><p>Join Us! We're a friendly bunch.</p></div>
+        </div>
+      </div>
 
       <div class="footer">
 
-        <ul>
-          <li> <a href="#">List 1 Link 1</a></li>
-          <li> <a href="#">List 1 Link 2</a></li>
-          <li> <a href="#">List 1 Link 3</a></li>
-          <li> <a href="#">List 1 Link 4</a></li>
-          <li> <a href="#">List 1 Link 5</a></li>
-        </ul>
-
-        <ul>
-          <li> <a href="#">List 2 Link 1</a></li>
-          <li> <a href="#">List 2 Link 2</a></li>
-          <li> <a href="#">List 2 Link 3</a></li>
-          <li> <a href="#">List 2 Link 4</a></li>
-          <li> <a href="#">List 2 Link 5</a></li>
-        </ul>
-
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li>Title 1</li>
+              <li> <a href="#">List 1 Link 1</a></li>
+              <li> <a href="#">List 1 Link 2</a></li>
+              <li> <a href="#">List 1 Link 3</a></li>
+              <li> <a href="#">List 1 Link 4</a></li>
+              <li> <a href="#">List 1 Link 5</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li>Title 2</li>
+              <li> <a href="#">List 2 Link 1</a></li>
+              <li> <a href="#">List 2 Link 2</a></li>
+              <li> <a href="#">List 2 Link 3</a></li>
+              <li> <a href="#">List 2 Link 4</a></li>
+              <li> <a href="#">List 2 Link 5</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+
+
+
+      <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("top").style.top = "0";
+        } else {
+          document.getElementById("top").style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+      </script>
   </body>
 </html>
